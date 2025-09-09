@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+    <title>Cadastrados</title>
+    <style>
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(to right,rgb(20,147,210), rgb(17,54,50));
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0,0,0,0.8);
+            padding:15px;
+            border-radius: 15px;
+            width:40%;
+            }
+            fieldset{
+            border:3px solid slateblue;
+            }
+            legend {
+            border: 1px solid slateblue;
+            padding: 10px;
+            text-align: center;
+            background-color: slateblue;
+            border-radius: 8px;
+            color: white;
+            }
+            .inputBox{
+                position: relative;
+            }
+            .inputUser{
+                background:none;
+                border: none;
+                border-bottom:1px solid white;
+                outline: none;
+                color: white;
+                font-size: 15px;
+                width:100%;
+                letter-spacing:2px;
+            }
+
+    </style>
+<body>
+
+
+    <center>
+        <p> <a href=https://gestao-membros-b77967b85401.herokuapp.com>Início</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Membros Cadastrados &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=https://gestao-membros-b77967b85401.herokuapp.com/gestao>Voltar</a>
+<br>
+<br>
+<br>
+
+
+    <center>
+      <table>
+        <thead>
+        <tr>
+            <th>Nome &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Matrícula &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+            <th>Telefone  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+            <th>Email   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+            <th>Sexo  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+            <th>Data de Nascimento  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+            <th>Data de filiação   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+            <th>Cidade   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+            <th>Estado   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+            <th>Endereço  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+        </thead>
+          <tbody>
+            <tr>
+                <td>{{usuario.nome}}    </td>
+                <td>{{usuario.matricula}}</td>
+                <td>{{usuario.telefone}}</td>
+                <td>{{usuario.email}}</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;{{usuario.sexo}}</td>
+                <td>{{usuario.nasc}}</td>
+                <td>{{usuario.filiacao}}</td>
+                <td>{{usuario.cidade}}</td>
+                <td>{{usuario.estado}}</td>
+                <td>{{usuario.endereco}}</td>
+
+
+            </tr>
+          </tbody>
+
+
+
+
+
+
+          <p>  </p>
+
+</table>
+
+
+    </ul>
+<br>
+<br>
+
+</center>
+
+
+
+
+
+        <center></center>
+
+
+        </fieldset>
+
+        <form/>
+
+</div>
+</body>
+</html>
