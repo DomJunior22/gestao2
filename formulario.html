@@ -1,0 +1,368 @@
+<?php
+    if(isset($_POST['submit']))
+    {
+
+    $nome = ($_POST['nome']);
+    $email = ($_POST['email']);
+    $telefone = ($_POST['telefone']);
+
+    $result = mysqli_query()
+
+    }
+
+
+
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <style>
+        body{background-image: linear-gradient(to right,rgb(20,147,210), rgb(17,54,210));}
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(1,1,1,0.1);
+            padding:15px;
+            border-radius: 15px;
+            width:40%;
+            }
+            fieldset{
+            border:3px solid slateblue;
+            }
+            legend {
+            border: 1px solid slateblue;
+            padding: 10px;
+            text-align: center;
+            background-color: slateblue;
+            border-radius: 8px;
+            color: white;
+            }
+            .inputBox{
+                position: relative;
+            }
+            .inputUser{
+                background:none;
+                border: none;
+                border-bottom:1px solid white;
+                outline: none;
+                color: white;
+                font-size: 15px;
+                width:100%;
+                letter-spacing:2px;
+            }
+
+    </style>
+<body>
+    <div class = "box">
+        <form action="/create" method="POST">
+        <fieldset>
+
+            <legend> <b>Cadastro de Membros <b/></legend>
+
+            <div class = "inputBox"></div>
+
+                <label for = "nome">Nome completo</label>
+                <input type = "text" name = "nome" id = "nome"class="inputUser" required>
+
+            <div/>
+
+            <div class = "inputBox"></div>
+
+                <label for = "carteira">N° Carteira de Membro</label>
+                <input type = "text" name = "carteira" id = "carteira"class="inputUser" required>
+
+            <div/>
+
+            <div class = "inputBox"></div>
+
+                <label for = "funcao">Função</label>
+                <input type = "text" name = "funcao" id = "funcao"class="inputUser" required>
+
+            <div/>
+
+
+
+
+
+             <div class = "inputBox"></div>
+
+                <label for = "email">Email</label>
+                <input type = "email" name = "email" id = "email"class="inputUser" required>
+
+
+             <br>
+
+            <div/>
+             <div class = "inputBox"></div>
+
+                <label for = "telefone">Telefone</label>
+                <input type = "tel" name = "telefone" id = "telefone"class="inputUser" required>
+
+
+            <div/>
+
+
+
+
+
+
+
+
+
+
+             <br>
+           <div class="inputBox">
+            <label for= " sexo "> Sexo:</label>
+            <input type = "text" id= "sexo" name = "sexo" class="inputUser"  required>
+             <br><br>
+
+
+            <div class="inputBox">
+            <label for= " data_nascimento "> Data de Nascimento:</label>
+            <input type = "date" id= "data_nascimento" name = "data_nascimento" class="inputUser" required >
+
+
+
+             <br><br>
+
+            <div class="inputBox">
+            <label for= " data_filiacao "> Data de Filiação:</label>
+            <input type = "date" id= "data_filiacao" name = "data_filiacao" class="inputUser" required >
+             <br><br>
+
+
+            <div class="inputBox">
+
+
+            <label for= " cidade "> Cidade  </label>
+            <input type = "text" id= "cidade" name = "cidade" class="inputUser" required >
+
+             <br><br>
+            <div class="inputBox">
+            <label for= " estado"> Estado  </label>
+            <input type = "text" id= "estado" name = "estado" class="inputUser"  required>
+             <br><br>
+            <div class="inputBox">
+            <label for= "endereco"> Endereço</label>
+            <input type = "text" id= "endereco" name = "endereco" class="inputUser" required >
+             </div>
+
+            <br>
+                <br>
+
+
+        <center> <a href=https://ac780fb766e1.ngrok-free.app><button class="inicio"> Cadastrar </button> </a></center>
+                <br>
+
+        <center><p><a href=https://ac780fb766e1.ngrok-free.app/gestao> Voltar </button></a></p></center>
+        <p> <a href=https://ac780fb766e1.ngrok-free.app/cadastrados>Cadastrados</a><p/>
+<style>
+ .voltar {  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voltar{
+  min-width: 100px;
+  min-height: 30px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.button:hover::before,
+.button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after,
+.button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+
+}
+
+</style>
+                   <style>
+  .inicio {  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicio{
+  min-width: 100px;
+  min-height: 30px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.button:hover::before,
+.button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after,
+.button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+
+}
+        </style>
+
+
+
+        </fieldset>
+
+        <form/>
+
+</div>
+</body>
+</html>
