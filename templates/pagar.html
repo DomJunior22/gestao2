@@ -2,9 +2,9 @@
     if(isset($_POST['submit']))
     {
 
-    $nome = ($_POST['nome']);
-    $email = ($_POST['email']);
-    $telefone = ($_POST['telefone']);
+    $receber = ($_POST['receber']);
+    $codigo = ($_POST['codigo']);
+    $devedor = ($_POST['devedor']);
 
     $result = mysqli_query()
 
@@ -21,97 +21,118 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Formulário</title>
-    <style>
-        body{background-image: linear-gradient(to right,rgb(20,147,210), rgb(17,54,210));}
-        .box{
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background-color: rgba(1,1,1,0.1);
-            padding:15px;
-            border-radius: 15px;
-            width:40%;
-            }
-            fieldset{
-            border:3px solid slateblue;
-            }
-            legend {
-            border: 1px solid slateblue;
-            padding: 10px;
-            text-align: center;
-            background-color: slateblue;
-            border-radius: 8px;
-            color: white;
-            }
-            .inputBox{
-                position: relative;
-            }
-            .inputUser{
-                background:none;
-                border: none;
-                border-bottom:1px solid white;
-                outline: none;
-                color: white;
-                font-size: 15px;
-                width:100%;
-                letter-spacing:2px;
-            }
+    <title>Contas a Pagar</title>
 
-    </style>
 <body>
+     <div style="margin:20px auto;width:50%;>
     <div class = "box">
-        <form action="/create" method="POST">
+        <form action="/pag" action = "/histpag"  method="POST">
         <fieldset>
 
-            <legend> <b>Cadastro de Membros <b/></legend>
+            <legend> <b>Inserir Contas á Pagar <b/></legend>
 
             <div class = "inputBox"></div>
 
-                <label for = "nome">Nome completo</label>
-                <input type = "text" name = "nome" id = "nome"class="inputUser" required>
+
+
+            <div/>
+
 
             <div/>
 
             <div class = "inputBox"></div>
 
-                <label for = "carteira">N° Carteira de Membro</label>
-                <input type = "text" name = "carteira" id = "carteira"class="inputUser" required>
+                <label for = "debito">Título.........................</label>
+                <input type = "text" name = "debito" id = "debito"class="inputUser" required>
 
             <div/>
+            <br>
 
-            <div class = "inputBox"></div>
+              <div class = "inputBox"></div>
 
-                <label for = "funcao">Função</label>
-                <input type = "text" name = "funcao" id = "funcao"class="inputUser" required>
+                <label for = "fornecedor">Fornecedor:..............</label>
+                <input type = "text" name = "fornecedor" id = "fornecedor"class="inputUser" required>
 
             <div/>
+            <br>
 
 
 
 
 
-             <div class = "inputBox"></div>
 
-                <label for = "email">Email</label>
-                <input type = "email" name = "email" id = "email"class="inputUser" required>
 
+        <div class = "inputBox"></div>
+
+                <label for = "valor"> Valor R$....................</label>
+                <input type = "text" name = "valor" id = "valor"class="inputUser" required>
+
+
+
+            <div class="inputBox">
+            <p>Data de vencimento: </p>
+             <br>
+            <label for= "dia"> Dia:.....</label>
+            <input type = "number" id= "diavenc" name = "diavenc" min="1" max="31" class="inputUser" required >
+            <br>
+            <br>
+
+            <div>
+            <label for= "mes"> Mês:.....</label>
+            <input type = "number" id= "mesvenc" name = "mesvenc" min="1" max="12" class="inputUser" required >
+
+            </div>
+            <br>
+
+
+            <div>
+            <label for= "anovenc"> Ano:.....</label>
+            <input type = "number" id= "anovenc" name = "anovenc" min="2020" max="2040" class="inputUser" required >
+              <div class="inputBox">
+            </div>
+             <br>
+
+            <p>Previsão de Pagamento  </p>
+               <label for= "diapag"> Dia:.....</label>
+            <input type = "number" id= "diapag" name = "diapag" min="1" max="31" class="inputUser" required >
+            <br>
+            <br>
+
+            <div>
+            <label for= "mes"> Mês:.....</label>
+            <input type = "number" id= "mespag" name = "mespag" min="1" max="12" class="inputUser" required >
+
+            </div>
+            <br>
+
+
+            <div>
+            <label for= "ano"> Ano:.....</label>
+            <input type = "number" id= "anopag" name = "anopag" min="2020" max="2040" class="inputUser" required >
+              <div class="inputBox">
+            </div>
+
+
+          <div class="inputBox">
 
              <br>
 
-            <div/>
-             <div class = "inputBox"></div>
-
-                <label for = "telefone">Telefone</label>
-                <input type = "tel" name = "telefone" id = "telefone"class="inputUser" required>
+            <label for= " meiopag "> Meio de Pagamento:</label>
+            <input type = "text" id= "meiopag" name = "meiopag" class="inputUser" required >
 
 
-            <div/>
+            <div class="inputBox">
+
+             <br>
+
+            <label for= " categoria "> Categoria/área:........</label>
+            <input type = "text" id= "categoria" name = "categoria" class="inputUser" >
 
 
 
+
+
+            <div class="inputBox">
 
 
 
@@ -120,51 +141,28 @@
 
 
              <br>
-           <div class="inputBox">
-            <label for= " sexo "> Sexo:</label>
-            <input type = "text" id= "sexo" name = "sexo" class="inputUser"  required>
-             <br><br>
-
-
-            <div class="inputBox">
-            <label for= " data_nascimento "> Data de Nascimento:</label>
-            <input type = "date" id= "data_nascimento" name = "data_nascimento" class="inputUser" required >
-
-
-
-             <br><br>
-
-            <div class="inputBox">
-            <label for= " data_filiacao "> Data de Filiação:</label>
-            <input type = "date" id= "data_filiacao" name = "data_filiacao" class="inputUser" required >
-             <br><br>
+            <label for= " descricao "> Descrição:.................</label>
+            <input type = "text" id= "descricao" name = "descricao" class="inputUser" required >
 
 
             <div class="inputBox">
 
 
-            <label for= " cidade "> Cidade  </label>
-            <input type = "text" id= "cidade" name = "cidade" class="inputUser" required >
-
-             <br><br>
-            <div class="inputBox">
-            <label for= " estado"> Estado  </label>
-            <input type = "text" id= "estado" name = "estado" class="inputUser"  required>
-             <br><br>
-            <div class="inputBox">
-            <label for= "endereco"> Endereço</label>
-            <input type = "text" id= "endereco" name = "endereco" class="inputUser" required >
-             </div>
 
             <br>
                 <br>
 
 
-        <center> <a href=https://ac780fb766e1.ngrok-free.app><button class="inicio"> Cadastrar </button> </a></center>
+        <center> <a href=https://ac780fb766e1.ngrok-free.app ><button class="inicio"> Registrar </button> </a></center>
                 <br>
 
-        <center><p><a href=https://ac780fb766e1.ngrok-free.app/gestao> Voltar </button></a></p></center>
-        <p> <a href=https://ac780fb766e1.ngrok-free.app/cadastrados>Cadastrados</a><p/>
+        <center><p><a href=https://ac780fb766e1.ngrok-free.app/caixa> Voltar </button></a></p></center>
+
+      <center>  <img src="https://cdn.pixabay.com/photo/2014/08/25/23/22/euro-427531_1280.jpg" width="600 " height="300"/>
+</center>
+
+
+                <p> CONTAS A PAGAR</p>
 <style>
  .voltar {  height: 100%;
 }
@@ -364,5 +362,50 @@ content: '';
         <form/>
 
 </div>
+<center>
+
+ <table border="1" bgcolor="LightGrey">
+        <thead>
+        <tr>
+            <th> ---Débitos---<font color=" red" ></font>  </th>
+            <th>---Data de Vencimento--- <font color=" red" ></font>  </th>
+            <th> ---Valor R$---<font color=" red" ></font>  </th>
+            <th>---Descrição--- <font color=" red" ></font>  </th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+         <br>
+         <br>
+             {% for pagars in pagar%}
+
+        <tr>
+         <th>{{pagars.debito}} </th>
+         <th>{{pagars.diavenci, pagars.mesvenci, pagars.anovenci}} </th>
+         <th>{{pagars.valor}} </th>
+         <th>{{pagars.descricao}} </th>
+
+
+
+
+        {% endfor%}
+
+        </tr>
+        </tbody>
+
+
+
+
+
+    </table>
+
+
+
+
+</center>
+
 </body>
 </html>
+

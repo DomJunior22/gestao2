@@ -1,10 +1,11 @@
+
 <?php
     if(isset($_POST['submit']))
     {
 
-    $nome = ($_POST['nome']);
-    $email = ($_POST['email']);
-    $telefone = ($_POST['telefone']);
+    $receber = ($_POST['receber']);
+    $codigo = ($_POST['codigo']);
+    $devedor = ($_POST['devedor']);
 
     $result = mysqli_query()
 
@@ -22,149 +23,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulário</title>
-    <style>
-        body{background-image: linear-gradient(to right,rgb(20,147,210), rgb(17,54,210));}
-        .box{
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background-color: rgba(1,1,1,0.1);
-            padding:15px;
-            border-radius: 15px;
-            width:40%;
-            }
-            fieldset{
-            border:3px solid slateblue;
-            }
-            legend {
-            border: 1px solid slateblue;
-            padding: 10px;
-            text-align: center;
-            background-color: slateblue;
-            border-radius: 8px;
-            color: white;
-            }
-            .inputBox{
-                position: relative;
-            }
-            .inputUser{
-                background:none;
-                border: none;
-                border-bottom:1px solid white;
-                outline: none;
-                color: white;
-                font-size: 15px;
-                width:100%;
-                letter-spacing:2px;
-            }
 
-    </style>
 <body>
+     <div style="margin:20px auto;width:50%;>
     <div class = "box">
-        <form action="/create" method="POST">
+        <form action="/receb" method="POST">
         <fieldset>
 
-            <legend> <b>Cadastro de Membros <b/></legend>
-
+            <legend> <b>Inserir Contas á receber <b/></legend>
             <div class = "inputBox"></div>
-
-                <label for = "nome">Nome completo</label>
-                <input type = "text" name = "nome" id = "nome"class="inputUser" required>
-
             <div/>
-
+            <div/>
             <div class = "inputBox"></div>
-
-                <label for = "carteira">N° Carteira de Membro</label>
-                <input type = "text" name = "carteira" id = "carteira"class="inputUser" required>
-
+                <label for = "devedor">Título:.........</label>
+                <input type = "text" name = "devedor" id = "devedor"class="inputUser" required>
             <div/>
+            <br>
+        <div class = "inputBox"></div>
+                <label for = "valor"> Valor.......R$</label>
+                <input type = "text" name = "valor" id = "valor"class="inputUser" required>
+        <div class="inputBox">
+         <br>
+            <label for= " vencimento "> Vencimento:</label>
+            <input type = "date" id= "vencimento" name = "vencimento" class="inputUser" required >
 
-            <div class = "inputBox"></div>
-
-                <label for = "funcao">Função</label>
-                <input type = "text" name = "funcao" id = "funcao"class="inputUser" required>
-
-            <div/>
-
-
-
-
-
-             <div class = "inputBox"></div>
-
-                <label for = "email">Email</label>
-                <input type = "email" name = "email" id = "email"class="inputUser" required>
-
+            <div class="inputBox">
 
              <br>
-
-            <div/>
-             <div class = "inputBox"></div>
-
-                <label for = "telefone">Telefone</label>
-                <input type = "tel" name = "telefone" id = "telefone"class="inputUser" required>
-
-
-            <div/>
-
-
-
-
-
-
-
-
-
-
-             <br>
-           <div class="inputBox">
-            <label for= " sexo "> Sexo:</label>
-            <input type = "text" id= "sexo" name = "sexo" class="inputUser"  required>
-             <br><br>
-
-
-            <div class="inputBox">
-            <label for= " data_nascimento "> Data de Nascimento:</label>
-            <input type = "date" id= "data_nascimento" name = "data_nascimento" class="inputUser" required >
-
-
-
-             <br><br>
-
-            <div class="inputBox">
-            <label for= " data_filiacao "> Data de Filiação:</label>
-            <input type = "date" id= "data_filiacao" name = "data_filiacao" class="inputUser" required >
-             <br><br>
+            <label for= " descricao "> Descrição:...</label>
+            <input type = "text" id= "descricao" name = "descricao" class="inputUser" required >
 
 
             <div class="inputBox">
 
 
-            <label for= " cidade "> Cidade  </label>
-            <input type = "text" id= "cidade" name = "cidade" class="inputUser" required >
-
-             <br><br>
-            <div class="inputBox">
-            <label for= " estado"> Estado  </label>
-            <input type = "text" id= "estado" name = "estado" class="inputUser"  required>
-             <br><br>
-            <div class="inputBox">
-            <label for= "endereco"> Endereço</label>
-            <input type = "text" id= "endereco" name = "endereco" class="inputUser" required >
-             </div>
 
             <br>
                 <br>
 
 
-        <center> <a href=https://ac780fb766e1.ngrok-free.app><button class="inicio"> Cadastrar </button> </a></center>
+        <center> <a href=https://ac780fb766e1.ngrok-free.app ><button class="inicio"> Registrar </button> </a></center>
                 <br>
 
-        <center><p><a href=https://ac780fb766e1.ngrok-free.app/gestao> Voltar </button></a></p></center>
-        <p> <a href=https://ac780fb766e1.ngrok-free.app/cadastrados>Cadastrados</a><p/>
+        <center><p><a href=https://ac780fb766e1.ngrok-free.app/caixa> Voltar </button></a></p></center>
+
+
+
+        <p>CONTAS A RECEBER</p>
 <style>
  .voltar {  height: 100%;
 }
@@ -364,5 +269,50 @@ content: '';
         <form/>
 
 </div>
+<center>
+
+ <table border="1" bgcolor="LightGrey">
+        <thead>
+        <tr>
+            <th> ---Título---<font color=" red" ></font>  </th>
+            <th>---Data de Vencimento--- <font color=" red" ></font>  </th>
+            <th> ---Valor R$---<font color=" red" ></font>  </th>
+            <th>---Descrição--- <font color=" red" ></font>  </th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+         <br>
+         <br>
+             {% for recebers in receber%}
+
+        <tr>
+         <th>{{recebers.devedor}} </th>
+         <th>{{recebers.vencimento}} </th>
+         <th>{{recebers.valor}} </th>
+         <th>{{recebers.descricao}} </th>
+
+
+
+
+        {% endfor%}
+
+        </tr>
+        </tbody>
+
+
+
+
+
+    </table>
+
+
+
+
+</center>
+
 </body>
 </html>
+
