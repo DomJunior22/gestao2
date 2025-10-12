@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    heigth: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #212121;
+
+}
+
+h1{
+    color: red;
+
+}
