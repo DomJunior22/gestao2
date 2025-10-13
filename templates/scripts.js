@@ -1,8 +1,10 @@
-const songName = document.getElementById("playlist-title");
-songName.innerText= 'lala lal laa';
 
-const song = document.getElementById('audio');
-song.play()
+let trilho= document.getElementById('trilho')
+
+trilho.addEventListener('click',()=>{
+    trilho.classList.toggle('dark')
+
+})
 
     
 
