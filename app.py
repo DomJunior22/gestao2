@@ -2,9 +2,9 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import  SQLAlchemy
 from flask_login import LoginManager, login_user, UserMixin, login_required
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
+#from selenium import webdriver
+#from selenium.webdriver.common.keys import Keys
+#from selenium.webdriver.common.by import By
 #navegador = webdriver.Chrome()
 #navegador.get("https://web.whatsapp.com")
 
@@ -186,7 +186,10 @@ def pag2():
 
 
 
-
+# f pagina conversor de moedas
+@app.route('/conversor')
+def conversor():
+    return render_template('conversor.html')
 
 # f pagina adicinar novo admin
 @app.route('/novoadmin')
@@ -204,7 +207,7 @@ def registrar():
     db.session.add(novo_admin)
     db.session.commit()
 
-    return redirect('/receber')
+    return redirect('/novoadmin')
 
 
 
@@ -331,15 +334,6 @@ def excluir():
     tasks = Tasks.query.all()
     return render_template('excluir2.html', tasks=tasks)
 
-#ROTA PARA DELETAr Devedor
-@app.route('/delete/<int:receber_id>', methods=['POST'])
-def delete_receber(receber_id):
-    task2 = Recebers.query.get(receber_id)
-
-    if task2:
-        db.session.delete(receber)
-        db.session.commit()
-    return redirect('/excluir')
 
 #pagina de excluir
 #@app.route('/excluir')
