@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <link href="http:/static/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <h2>Claro/Escuro</h2>
+<audio src="http:/templates/audio.mp3"></audio>
+
+    <div class="trilho" id = "trilho">
+        <div class="indicador"></div>
+
+
+</div>
+
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+
+
+
+    <center>  <h3> <p> UNIVESP -PROJETO INTEGRADOR TECNOLOGIA DA INFORMAÇÃO</p></h3>
+    <br>
+    <br>
+
+
+    <h4>SIGCom </h4>
+    <h5>Sistema Integrado de Gerenciamento da Comunidade Igreja Batista</h5>
+ <p>  <big> <font color = "white"> <font size="20px">FINANCEIRO </font></font></big> </p>
+    <br>
+
+
+
+<center></center><img src ="https://cdn.pixabay.com/photo/2014/07/06/13/55/calculator-385506_1280.jpg" width="350" height="220"/>
+
+<div class="text-box">
+    <a href="http://127.0.0.1:5000/caixa" class="btn btn-white btn-        animate"> Fluxo de Caixa</a>
+</div>
+<div class="text-box2">
+    <a href="http://127.0.0.1:5000/conversor" class="btn2 btn-white btn-        animate">Conversor de Moedas</a>
+
+
+</div>
+
+
+<div class="text-box5">
+    <a href="http://127.0.0.1:5000/menu1" class="btn2 btn-white btn-        animate">Voltar</a>
+</div>
+
+
+
+
+<style>
+    body {
+    font-family: sans-serif;
+    background-color: #81d4fa;
+    font-weight: bold;
+}
+
+.text-box {
+    margin-left: -40vw;
+   margin-top: 10vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+</style>
+
+<style>
+    body {
+    font-family: sans-serif;
+    background-color: #81d4fa;
+    font-weight: bold;
+}
+
+.text-box2 {
+    margin-left: -13vw;
+   margin-top: 10vh;
+}
+
+.btn2:link,
+.btn2:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn2-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn2::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn2-white::after {
+    background-color: #fff;
+}
+
+.btn2:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn2-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+</style>
+
+
+<style>
+    body {
+    font-family: sans-serif;
+    background-color: #81d4fa;
+    font-weight: bold;
+}
+
+.text-box5 {
+    margin-left: 21vw;
+   margin-top: 10vh;
+}
+
+.btn2:link,
+.btn2:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn2-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn2::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn2-white::after {
+    background-color: #fff;
+}
+
+.btn2:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn2-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+    </center>
+
+    </p>
+
+
+
+<script src="http:/static/scripts.js"></script>
+
+
+</body>
+</html>
