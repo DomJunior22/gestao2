@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: absolute;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -95,4 +95,5 @@ size: 7px;
 
 body.dark h5{
 color: #ffffff;
+size: 10px;
 }
