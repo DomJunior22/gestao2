@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-   <meta charset="UTF-8">
-    <title>Cadastrados</title>
-    <style>
-        body{
-        font-family: Arial, Helvetica, sans-serif;
-        background-image: linear-gradient(to right,rgb(20,147,210), rgb(17,54,210));
-        }
-        .box{
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background-color: rgba(0,0,0,0.8);
-            padding:15px;
-            border-radius: 15px;
-            width:40%;
-            }
-            fieldset{
-            border:3px solid slateblue;
-            }
-            legend {
-            border: 1px solid slateblue;
-            padding: 10px;
-            text-align: center;
-            background-color: slateblue;
-            border-radius: 8px;
-            color: white;
-            }
-            .inputBox{
-                position: relative;
-            }
-            .inputUser{
-                background:none;
-                border: none;
-                border-bottom:1px solid white;
-                outline: none;
-                color: white;
-                font-size: 15px;
-                width:100%;
-                letter-spacing:2px;
-            }
 
-    </style>
+    <link href="http:/static/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <h2>Claro/Escuro</h2>
+
+
+    <div class="trilho" id = "trilho">
+        <div class="indicador"></div>
+
+
+</div>
+
+    <meta charset="UTF-8">
+    <title>Gestao de Membros</title>
+
+
+
 <body>
     <center>
         <p> <a href=http://127.0.0.1:5000/menu1>  <button class="inicio">Menu   </button></a> <a href=http://127.0.0.1:5000/formulario><button class="novomembro"> Cadastrar Novo Membro   </button>  </a><a href=http://127.0.0.1:5000/gestao><button class="voltar">    Voltar </button></a>
@@ -406,7 +382,35 @@ content: '';
         </fieldset>
 
         <form/>
+        <script src="http:/static/scripts.js"></script>
 
 </div>
+
+<style>*{
+ font-family: system-ui;
+}
+
+table{
+ border-collapse: collapse;
+ border: 1px solid #ededed;
+}
+
+tbody tr {
+ height: 40px;
+ border-bottom: 1px solid #ededed;
+ background-color: #fbfbfb;
+ text-align: center;
+}
+
+.title {
+ background-color: #009688;
+ height: 30px;
+ color: #fff;
+ font-size: 26px;
+} </style>
+
+
+<script src="http:/static/scripts.js"></script>
+
 </body>
 </html>

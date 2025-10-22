@@ -1,32 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-
-    <link href="http:/static/style.css" rel="stylesheet">
-
-</head>
-<body>
-
-    <h2>Claro/Escuro</h2>
-<audio src="http:/templates/audio.mp3"></audio>
-
-    <div class="trilho" id = "trilho">
-        <div class="indicador"></div>
-
-
-</div>
     <meta charset="UTF-8">
-    <title>Formulário</title>
+    <title>Title</title>
+  <title>Excluir Pagar</title>
     <style>
-
+        body{background-image: linear-gradient(to right,rgb(128,128,128), rgb(220,220,220));}
         .box{
-            color: white;
+            color: green;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            background-color: rgba(1,1,1,0.1);
+            background-color: rgba(0,0,0,0.8);
             padding:15px;
             border-radius: 15px;
             width:40%;
@@ -50,120 +37,86 @@
                 border: none;
                 border-bottom:1px solid white;
                 outline: none;
-                color: white;
+                color: blue;
                 font-size: 15px;
                 width:100%;
                 letter-spacing:2px;
             }
 
     </style>
+
+
+
+</head>
 <body>
 
-    <div class = "box">
-        <form action="/create" method="POST">
-        <fieldset>
+<center>
+<h1>  <font color="darkred" Excluir Pagar </font></h1>
+<H1>  ATENÇÃO: APÓS CLICAR EM EXCLUIR, NÃO É POSSÍVEL DESFAZER!!!</H1>
+    <br>
+    <br>
+     <table border="1" bgcolor="LightGrey">
+        <thead>
+        <tr>
+            <th> ---Débitos---<font color=" red" ></font>  </th>
+            <th>---Data de Vencimento--- <font color=" red" ></font>  </th>
+            <th> ---Valor R$---<font color=" red" ></font>  </th>
+            <th>---Descrição--- <font color=" red" ></font>  </th>
 
-            <legend> <b>Cadastro de Membros <b/></legend>
+        </tr>
 
-            <div class = "inputBox"></div>
+        </thead>
 
-                <label for = "nome">Nome completo</label>
-                <input type = "text" name = "nome" id = "nome"class="inputUser" required>
+        <tbody>
+         <br>
+         <br>
+             {% for pagars in pagar%}
 
-            <div/>
-
-            <div class = "inputBox"></div>
-
-                <label for = "carteira">N° Carteira de Membro</label>
-                <input type = "text" name = "carteira" id = "carteira"class="inputUser" required>
-
-            <div/>
-
-            <div class = "inputBox"></div>
-
-                <label for = "funcao">Função</label>
-                <input type = "text" name = "funcao" id = "funcao"class="inputUser" required>
-
-            <div/>
-
-
-
-
-
-             <div class = "inputBox"></div>
-
-                <label for = "email">Email</label>
-                <input type = "email" name = "email" id = "email"class="inputUser" required>
-
-
-             <br>
-
-            <div/>
-             <div class = "inputBox"></div>
-
-                <label for = "telefone">Telefone</label>
-                <input type = "tel" name = "telefone" id = "telefone"class="inputUser" required>
-
-
-            <div/>
+        <tr>
+         <th>{{pagars.debito}} </th>
+         <th>{{pagars.diavenci - pagars.mesvenci, pagars.anovenci}} </th>
+         <th>{{pagars.valor}} </th>
+         <th>{{pagars.descricao}} </th>
 
 
 
 
 
 
+        </tr>
+        </tbody>
 
 
 
 
-             <br>
-           <div class="inputBox">
-            <label for= " sexo "> Sexo:</label>
-            <input type = "text" id= "sexo" name = "sexo" class="inputUser"  required>
-             <br><br>
+
+    </table>
+
+            <form action="/delete/{{pagars.codigo}}" method = "POST" style="display:inline;position: absolute;"
+            <a class="button" href="#" role="button">
+
+  </div>
+</a>
+
+            <th><button type="submit" id =" bb" > EXCLUIR</button></th>
+{% endfor%}
+</ol>
+            </form>
+
+    </table>
 
 
-            <div class="inputBox">
-            <label for= " data_nascimento "> Data de Nascimento:</label>
-            <input type = "date" id= "data_nascimento" name = "data_nascimento" class="inputUser" required >
 
 
 
-             <br><br>
 
-            <div class="inputBox">
-            <label for= " data_filiacao "> Data de Filiação:</label>
-            <input type = "date" id= "data_filiacao" name = "data_filiacao" class="inputUser" required >
-             <br><br>
+    </tbody>
 
 
-            <div class="inputBox">
-
-
-            <label for= " cidade "> Cidade  </label>
-            <input type = "text" id= "cidade" name = "cidade" class="inputUser" required >
-
-             <br><br>
-            <div class="inputBox">
-            <label for= " estado"> Estado  </label>
-            <input type = "text" id= "estado" name = "estado" class="inputUser"  required>
-             <br><br>
-            <div class="inputBox">
-            <label for= "endereco"> Endereço</label>
-            <input type = "text" id= "endereco" name = "endereco" class="inputUser" required >
-             </div>
-
-            <br>
-                <br>
-
-
-        <center> <a href=http://127.0.0.1:5000><button class="inicio"> Cadastrar </button> </a></center>
-                <br>
-
-        <center><p><a href=http://127.0.0.1:5000/gestao> <font color="white">Voltar</font>  </button></a></p></center>
-        <p> <a href=http://127.0.0.1:5000/cadastrados><font color="white" >Cadastrados</font></a><p/>
-<style>
- .voltar {  height: 100%;
+            <center><p> <a href=http://127.0.0.1:5000/menu1><button class="inicio">Menu    </button></a></center>
+            <center><p> <a href=http://127.0.0.1:5000/gestao><button class="voltar"> Voltar  </button></a></center>
+               <style>
+  .inicio {  height: 100%;
 }
 
 .wrap {
@@ -173,7 +126,7 @@
   justify-content: center;
 }
 
-.voltar{
+.inicio {
   min-width: 100px;
   min-height: 30px;
   display: inline-flex;
@@ -185,7 +138,7 @@
   text-align: center;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: white;
+  color: #313133;
   background: #4FD1C5;
 background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
   border: none;
@@ -256,10 +209,9 @@ content: '';
   }
 
 }
-
-</style>
-<style>
-  .inicio {  height: 100%;
+        </style>
+               <style>
+  .voltar {  height: 100%;
 }
 
 .wrap {
@@ -269,7 +221,7 @@ content: '';
   justify-content: center;
 }
 
-.inicio{
+.voltar {
   min-width: 100px;
   min-height: 30px;
   display: inline-flex;
@@ -355,13 +307,9 @@ content: '';
         </style>
 
 
-
-        </fieldset>
-
-        <form/>
-
-
-</div>
-<script src="http:/static/scripts.js"></script>
 </body>
 </html>
+
+
+
+

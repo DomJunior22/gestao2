@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <link rel="stylesheet" href="http:/static/style2.css">
+     <link rel="stylesheet" href="http:/static/style.css">
+
 </head>
 <body>
+
     <div class=" container">
         <h1>  Conversor de Moedas</h1>
+
+
+
 
         <form class="converterForm" id="converterForm">
             <div class="currency-row">
                 <div class="currency-input">
                     <label for="amount"> Valor</label>
-                    <input type="number" id="amount" placeholder="Digite o valor" step="0.1" min="0" required
+                    <input type="number" id="amount" placeholder="Digite o valor" step="0.1" min="0" max="1000000000000000"required
             </div>
             <div class="current-select">
                 <label for="fromCurrency">De</label>
@@ -75,19 +82,24 @@
                 </div>
 
 
+     <div class="trilho" id = "trilho">
+        <div class="indicador"></div>
 
+    </div>
         </form>
 
 
 
-
-    </div>
 <script src="http:/static/scripts2.js"></script>
+<script src="http:/static/scripts.js"></script>
+
 </body>
 
 <div class="text-box5">
     <a href="http://127.0.0.1:5000/financeiro" class="btn2 btn-white btn-        animate">Voltar</a>
 </div>
+
+
 
 <style>
     body {
@@ -169,4 +181,6 @@
 
 
 </style>
+
+
 </html>

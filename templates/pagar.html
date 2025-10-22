@@ -24,6 +24,9 @@
     <title>Contas a Pagar</title>
 
 <body>
+
+
+
      <div style="margin:20px auto;width:50%;>
     <div class = "box">
         <form action="/pag" action = "/histpag"  method="POST">
@@ -367,10 +370,12 @@ content: '';
  <table border="1" bgcolor="LightGrey">
         <thead>
         <tr>
-            <th> ---Débitos---<font color=" red" ></font>  </th>
-            <th>---Data de Vencimento--- <font color=" red" ></font>  </th>
-            <th> ---Valor R$---<font color=" red" ></font>  </th>
-            <th>---Descrição--- <font color=" red" ></font>  </th>
+            <th> _________TÍTULO__________<font color=" red" ></font>  </th>
+            <th>___VENCIMENTO:__DIA___<font color=" red" ></font>  </th>
+             <th>___MÊS___ <font color=" red" ></font>  </th>
+             <th>______  ANO______ <font color=" red" ></font>  </th>
+            <th> ____ VALOR R$____<font color=" red" ></font>  </th>
+            <th>___________DESCRIÇÃO__________ <font color=" red" ></font>  </th>
 
         </tr>
 
@@ -383,7 +388,12 @@ content: '';
 
         <tr>
          <th>{{pagars.debito}} </th>
-         <th>{{pagars.diavenci, pagars.mesvenci, pagars.anovenci}} </th>
+         <th>{{pagars.diavenci}} </th>
+         <th>{{pagars.mesvenci}}  </th>
+         <th>{{pagars.anovenci}}  </th>
+
+
+
          <th>{{pagars.valor}} </th>
          <th>{{pagars.descricao}} </th>
 
@@ -406,7 +416,32 @@ content: '';
 
 </center>
 
+            <style>
 
+
+                *{
+ font-family: system-ui;
+}
+
+table{
+ border-collapse: collapse;
+ border: 1px solid #ededed;
+}
+
+tbody tr {
+ height: 40px;
+ border-bottom: 1px solid #ededed;
+ background-color: #fbfbfb;
+ text-align: center;
+}
+
+.title {
+ background-color: #009688;
+ height: 30px;
+ color: #fff;
+ font-size: 26px;
+}
+            </style>
 
 
 
