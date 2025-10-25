@@ -1,18 +1,15 @@
 # BIBLIOTECAS IMPORTADAS
 from flask import Flask, render_template, request, redirect
-from flask_sqlalchemy import  SQLAlchemy
-from flask_login import LoginManager, login_user, UserMixin, login_required
-#from selenium import webdriver
-#from selenium.webdriver.common.keys import Keys
-#from selenium.webdriver.common.by import By
-#navegador = webdriver.Chrome()
-#navegador.get("https://web.whatsapp.com")
+from flask_sqlalchemy import SQLAlchemy
 
-#INICIANDO O APP FLASK
-app= Flask(__name__)
-# lm= LoginManager(app)
-# app.secret_key=" projeto1"
-app.config['SQLALCHEMY_DATABASE_URI'] = '{SGBD}://{usuario}:{senha}@{servidor}/{database}'.format( SGBD='mysql+pymysql', usuario='root', senha='byqUvTZEpWxZjNTzdVVikmDLjmbajkTL', servidor='hopper.proxy.rlwy.net:10763', database='railway' )
+
+app=Flask(__name__)
+
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = '{SGBD}://{usuario}:{senha}@{servidor}/{database}'.format( SGBD='mysql+pymysql', usuario='root', senha='byqUvTZEpWxZjNTzdVVikmDLjmbajkTL', servidor='hopper.proxy.rlwy.net:10763', database='railway')
+
+#mysql://root:byqUvTZEpWxZjNTzdVVikmDLjmbajkTL@hopper.proxy.rlwy.net:10763/railway
 
 #
 # @lm.user_loader
@@ -49,10 +46,10 @@ class Tasks (db.Model):
 #
 # #CRIANDO TABELA DE ADMINISTRADORES
 
-class Admin(UserMixin, db.Model):
-     id = db.Column(db.Integer, unique=True, primary_key=True, nullable=False)
-     nome = db.Column(db.String(250), unique=True, nullable=False)
-     senha = db.Column(db.String(100), nullable=False)
+#class Admin(UserMixin, db.Model):
+  #   id = db.Column(db.Integer, unique=True, primary_key=True, nullable=False)
+  #   nome = db.Column(db.String(250), unique=True, nullable=False)
+  #   senha = db.Column(db.String(100), nullable=False)
 
  # CRIANDO TABELA CONTAS A Pagar
 
@@ -403,9 +400,7 @@ def create_task():
 
 
 
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
 
-        app.run(debug=True)
 
+if __name__=='__main__':
+    app.run()
